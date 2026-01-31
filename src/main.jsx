@@ -12,7 +12,7 @@ import { WishlistProvider } from './context/WishlistContext'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <WishlistProvider>
           <App />
         </WishlistProvider>
