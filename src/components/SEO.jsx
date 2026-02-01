@@ -20,6 +20,7 @@ const SEO = ({ title, description, keywords, image, url, type = 'website' }) => 
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={metaKeywords} />
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={metaUrl} />
 
       {/* Open Graph / Facebook */}
