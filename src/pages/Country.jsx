@@ -464,7 +464,7 @@ const Country = () => {
                <p className="text-gray-500">View major cities and destinations geographically.</p>
             </div>
             
-            <div className="relative w-full h-[350px] lg:h-[500px] rounded-3xl overflow-hidden shadow-lg bg-gray-200 group">
+            <div className="relative w-full max-w-full h-[350px] lg:h-[500px] rounded-3xl overflow-hidden shadow-lg bg-gray-200 group">
                {country.latlng ? (
                    <CityMap 
                       center={country.latlng} 

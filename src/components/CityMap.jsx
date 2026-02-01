@@ -135,13 +135,14 @@ const CityMap = ({ center, places, cityName }) => {
   const API_KEY = import.meta.env.VITE_OPENTRIPMAP_API_KEY;
 
   return (
-    <div className="h-full w-full relative z-0">
-      <MapContainer 
-        center={position} 
-        zoom={13} 
-        style={{ height: "100%", width: "100%", borderRadius: "1.5rem" }}
-        whenCreated={() => setMapReady(true)}
-      >
+    <div className="h-full w-full max-w-full relative z-0 overflow-hidden rounded-[1.5rem]">
+      <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+        <MapContainer 
+            center={position} 
+            zoom={13} 
+            style={{ height: "100%", width: "100%", background: "#f3f4f6" }}
+            whenCreated={() => setMapReady(true)}
+        >
          {/* CartoDB Voyager Tiles (Premium Look) */}
         <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
@@ -154,7 +155,8 @@ const CityMap = ({ center, places, cityName }) => {
         <MapUpdater center={center} places={places} />
 
         <MapMarkers places={places} />
-      </MapContainer>
+        </MapContainer>
+      </div>
     </div>
   );
 };

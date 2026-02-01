@@ -328,7 +328,7 @@ const City = () => {
                <p className="text-gray-500">View attractions geographically to plan your route</p>
             </div>
             
-            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-lg bg-gray-200 group min-h-[500px]">
+            <div className="relative w-full max-w-full aspect-video rounded-3xl overflow-hidden shadow-lg bg-gray-200 group min-h-[500px]">
                {/* Interactive Map */}
                <CityMap center={mapCenter} places={cityInfo.places} cityName={cityInfo.name} />
             </div>
